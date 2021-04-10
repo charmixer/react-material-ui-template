@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "react-material-ui-template",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
@@ -17,6 +17,7 @@
   },
   "scripts": {
     "watch-sass": "sass src/sass:public/css --watch",
+    "watch-package": "nodemon --watch package.json --exec \"npm install\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -58,6 +59,7 @@
     "@storybook/addon-links": "^6.2.7",
     "@storybook/node-logger": "^6.2.7",
     "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.7"
+    "@storybook/react": "^6.2.7",
+    "storybook-addon-material-ui": "latest"
   }
 }

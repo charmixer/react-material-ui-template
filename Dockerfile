@@ -11,4 +11,4 @@ RUN npm i -g sass
 RUN chown -R 1000 /usr/src/app
 
 USER 1000
-EXPOSE 3000
+EXPOSE 3000 6006

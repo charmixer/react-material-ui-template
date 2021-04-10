@@ -9,8 +9,8 @@ import Fab from '@material-ui/core/Fab';
 import EditIcon from '@material-ui/icons/Edit';
 
 import { TopBar, NavDrawer, DRAWER_WIDTH } from '../common/NavBar';
-import { Home } from '../home';
-import { Recipes, Recipe } from '../recipes';
+import { Home } from '../pages/home';
+import { Recipes, Recipe } from '../pages/recipes';
 
 const theme = createMuiTheme({
   palette: {
@@ -113,8 +113,6 @@ function App(props : any) {
                 <EditIcon />
               </Fab>
             </Zoom>
-
-
           </main>
         </BrowserRouter>
       </div>

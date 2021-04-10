@@ -5,7 +5,11 @@ services:
   omnomnom:
     command: bash -c "
         npm install
-        && concurrently \"npm run start\" \"npm run watch-sass\"
+        && concurrently
+            \"npm run start\"
+            \"npm run watch-sass\"
+            \"npm run storybook\"
+            \"npm run watch-package\"
       "
     container_name: "omnomnom"
     build:
@@ -15,14 +19,12 @@ services:
       - ./node_modules:/usr/src/app/node_modules # cache
       - ./package.json:/usr/src/app/package.json
       - ./src:/usr/src/app/src
+      - ./.storybook:/usr/src/app/.storybook
       - ./public:/usr/src/app/public
     ports:
       - "3000:3000"
+      - "3001:6006"
     user: "1000:1001"
-    #environment:
-      #CHOKIDAR_USEPOLLING: "true"
-    stdin_open: true # docker run -i
-    # tty: true        # docker run -t
     networks:
       - public
     restart: on-failure
