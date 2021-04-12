@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
 
-  omnomnom:
+  react-material-ui-template:
     command: bash -c "
         npm install
         && concurrently
@@ -11,7 +11,7 @@ services:
             \"npm run storybook\"
             \"npm run watch-package\"
       "
-    container_name: "omnomnom"
+    container_name: "react-material-ui-template"
     build:
       context: .
       dockerfile: Dockerfile
